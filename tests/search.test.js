@@ -30,11 +30,11 @@ describe('Pruebas de regresión de búsqueda', function() {
             await searchBox.sendKeys('Selenium', Key.RETURN);
 
             // 4. Esperar hasta que el título de la página cambie
-            await driver.wait(until.titleContains('Selenium'), 5000);
+            await driver.wait(until.titleContains('Sxlenium'), 5000);
 
             // 5. Verificar que el título de la página contiene el término de búsqueda
             const pageTitle = await driver.getTitle();
-            expect(pageTitle).to.include('Sxlenium');
+            expect(pageTitle).to.include('Selenium');
 
         } catch (error) {
             console.error('Error durante la ejecución del test:', error);
